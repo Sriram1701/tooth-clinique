@@ -74,9 +74,9 @@ nav {
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 2px 2px 5px rgba(0, 150, 255, 0.8), 
-                -2px -2px 5px rgba(255, 255, 255, 0.5);
-    
+    box-shadow: 2px 2px 5px rgba(0, 150, 255, 0.8),
+        -2px -2px 5px rgba(255, 255, 255, 0.5);
+
     transition: all 0.4s ease;
 }
 
@@ -185,7 +185,7 @@ nav {
     line-height: 1.7;
     margin-bottom: 20px;
     font-weight: 600;
-    max-width: 510px;
+    max-width: 620px;
 }
 
 /* New badge stylings for "Over 1000+ Happy Smiles" */
@@ -235,6 +235,7 @@ nav {
     /* Shrinks the main title font automatically on mobile */
     .hero-title {
         font-size: 2.2rem !important;
+        line-height: 1;
     }
 
     .hero-btn-group {
@@ -246,8 +247,9 @@ nav {
 
     .hero-subtitle {
         max-width: 100%;
-        font-size: 13px !important;
-        line-height: 1.5;
+        font-size: 12px !important;
+        line-height: 1.25;
+        text-align: center;
     }
 
     .hero-btn-group {
@@ -384,7 +386,8 @@ nav {
 @media (max-width: 768px) {
     .hero-features-list {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr); /* மேல இரண்டு காலம் */
+        grid-template-columns: repeat(2, 1fr);
+        /* மேல இரண்டு காலம் */
         gap: 10px;
         width: 100%;
         padding: 0 10px;
@@ -392,20 +395,26 @@ nav {
 
     .feature-tag-item {
         justify-content: center;
-        padding: 8px 10px !important; /* பட்டன் பேடிங் குறைப்பு */
-        white-space: nowrap;          /* டெக்ஸ்ட் உடையாமல் இருக்க */
-        width: 100%;                  /* கன்டெய்னர் முழுமைக்கும் இருக்க */
+        padding: 8px 10px !important;
+        /* பட்டன் பேடிங் குறைப்பு */
+        white-space: nowrap;
+        /* டெக்ஸ்ட் உடையாமல் இருக்க */
+        width: 100%;
+        /* கன்டெய்னர் முழுமைக்கும் இருக்க */
     }
 
     .feature-tag-item span {
-        font-size: 0.8rem !important; /* எழுத்து அளவு குறைப்பு */
+        font-size: 0.8rem !important;
+        /* எழுத்து அளவு குறைப்பு */
     }
 
     /* மூன்றாவது ஐட்டத்தை மட்டும் மையப்படுத்த */
     .feature-tag-item:nth-child(3) {
-        grid-column: span 2; /* இரண்டு காலத்தையும் ஆக்கிரமிக்க */
+        grid-column: span 2;
+        /* இரண்டு காலத்தையும் ஆக்கிரமிக்க */
         justify-self: center;
-        width: 50%;          /* மூன்றாவது ஐட்டம் மட்டும் சின்னதா இருக்க */
+        width: 50%;
+        /* மூன்றாவது ஐட்டம் மட்டும் சின்னதா இருக்க */
     }
 }
 
@@ -423,7 +432,7 @@ nav {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 150, 255, 0.1);
     border: 8px solid white;
-    
+
 }
 
 .hero-main-img {
@@ -511,6 +520,34 @@ nav {
     margin: 40px auto 0;
 }
 
+.service-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 10%;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
 .dropdown-trigger-btn {
     background: white;
     border: 2px solid var(--primary-blue);
@@ -575,7 +612,7 @@ nav {
 
 .doctor-card {
     background: var(--soft-white);
-    border: 1px solid #e2e8f0;
+    border: 1px solid #94c0f9;
     border-radius: 24px;
     padding: 30px 20px;
     flex: 1;
@@ -596,7 +633,7 @@ nav {
     margin: 0 auto 20px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid var(--light-blue);
+    border: 3px solid #35a164;
 }
 
 .doc-img-holder img {
@@ -698,6 +735,7 @@ nav {
 }
 
 @media (max-width: 768px) {
+
     /* 1. Make the outer container a single column layout on mobile */
     .infra-gallery-container {
         display: flex;
@@ -713,7 +751,7 @@ nav {
 
     /* 3. Reduce big image height slightly so it fits beautifully on mobile screens */
     .main-premium-pic {
-        height: 300px; 
+        height: 300px;
     }
 
     /* 4. Keep the 4 small images in a neat 2x2 grid below the big image */
@@ -774,37 +812,38 @@ nav {
 
 .reel-box-item {
     position: relative;
-    width: 240px;    
-    height: 420px;     
+    width: 240px;
+    height: 420px;
     background: #000;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;     
+    overflow: hidden;
 }
 
 .reel-video {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 16px;
 }
 
 .reel-box-item i {
-    position: absolute; 
+    position: absolute;
     font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.7);
-    pointer-events: none;  
+    pointer-events: none;
     z-index: 2;
 }
 
 @media (max-width: 768px) {
     .reel-box-item {
-        width: 150px;  
-        height: 260px;  
+        width: 150px;
+        height: 260px;
     }
+
     .reel-box-item i {
         font-size: 1.8rem;
     }
@@ -1042,11 +1081,23 @@ footer {
     margin-top: 5px;
 }
 
+/* developer link */
+.developer-link {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.developer-link:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
 /* Responsive adjustment for Mobile view */
 @media (max-width: 768px) {
     .copyright-text {
         font-size: 0.8rem !important;
     }
+
     .developer-text {
         font-size: 0.88rem;
     }
@@ -1139,9 +1190,9 @@ footer {
     }
 
     .hero-brand-tag {
-
-        width: 250px;
-        margin: 0 auto;
+        font-size: 21px;
+        width: auto;
+        margin: auto;
         line-height: 1.3;
     }
 
