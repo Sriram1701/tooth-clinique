@@ -55,7 +55,7 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -63,11 +63,28 @@ nav {
     text-decoration: none;
     color: var(--dark-text);
     font-weight: 700;
-    transition: color 0.3s;
+    transition: all 0.4s ease;
 }
 
-.nav-links a:hover {
-    color: var(--primary-blue);
+.nav-menu-btn {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 700;
+    padding: 8px 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 2px 5px rgba(0, 150, 255, 0.8), 
+                -2px -2px 5px rgba(255, 255, 255, 0.5);
+    
+    transition: all 0.4s ease;
+}
+
+.nav-menu-btn:hover {
+    background: var(--primary-blue);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 150, 255, 0.3);
+    transform: translateY(-2px);
 }
 
 .dropdown {
@@ -220,8 +237,7 @@ nav {
         font-size: 2.2rem !important;
     }
 
-    .hero-btn-group,
-    .hero-features-list {
+    .hero-btn-group {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -336,6 +352,7 @@ nav {
 /* Features Triple Grid Base */
 .hero-features-list {
     display: flex;
+    justify-content: center;
     gap: 20px;
     align-items: center;
     margin-top: 20px;
@@ -361,6 +378,35 @@ nav {
     font-weight: 700;
     font-size: 0.95rem;
     color: var(--dark-text);
+}
+
+/* மொபைல் வியூவில் மேல இரண்டு, கீழே ஒன்று அடுக்க மற்றும் சைஸை சீராக்க */
+@media (max-width: 768px) {
+    .hero-features-list {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr); /* மேல இரண்டு காலம் */
+        gap: 10px;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .feature-tag-item {
+        justify-content: center;
+        padding: 8px 10px !important; /* பட்டன் பேடிங் குறைப்பு */
+        white-space: nowrap;          /* டெக்ஸ்ட் உடையாமல் இருக்க */
+        width: 100%;                  /* கன்டெய்னர் முழுமைக்கும் இருக்க */
+    }
+
+    .feature-tag-item span {
+        font-size: 0.8rem !important; /* எழுத்து அளவு குறைப்பு */
+    }
+
+    /* மூன்றாவது ஐட்டத்தை மட்டும் மையப்படுத்த */
+    .feature-tag-item:nth-child(3) {
+        grid-column: span 2; /* இரண்டு காலத்தையும் ஆக்கிரமிக்க */
+        justify-self: center;
+        width: 50%;          /* மூன்றாவது ஐட்டம் மட்டும் சின்னதா இருக்க */
+    }
 }
 
 .hero-graphic {
@@ -1093,7 +1139,10 @@ footer {
     }
 
     .hero-brand-tag {
-        font-size: 1.3rem;
+
+        width: 250px;
+        margin: 0 auto;
+        line-height: 1.3;
     }
 
     .hero-btn-group {
@@ -1106,17 +1155,6 @@ footer {
     .cta-btn.btn-deep-blue {
         justify-content: center;
         width: 100%;
-    }
-
-    .hero-features-list {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-    }
-
-    .feature-tag-item {
-        width: 100%;
-        justify-content: center;
     }
 
     .infra-slide-layout {
