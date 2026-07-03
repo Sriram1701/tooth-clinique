@@ -234,8 +234,10 @@ nav {
 
     /* Shrinks the main title font automatically on mobile */
     .hero-title {
-        font-size: 2.2rem !important;
+        font-size: 2rem !important;
         line-height: 1;
+        white-space: nowrap;
+        margin-bottom: 8px;
     }
 
     .hero-btn-group {
@@ -250,6 +252,7 @@ nav {
         font-size: 12px !important;
         line-height: 1.25;
         text-align: center;
+        margin-top: 8px;
     }
 
     .hero-btn-group {
