@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainLabel = document.getElementById('main-image-label');
 
     if (mainImg && mainLabel) {
-        mainLabel.innerText = mainImg.alt;
+        mainLabel.innerText = ""; // ஆரம்ப டெக்ஸ்ட்டையும் காலி செய்துவிடும்
     }
 
     function rotateClinicImages() {
@@ -131,10 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (mainImg) {
             mainImg.src = imageUrls[currentIndex];
             mainImg.alt = altLabels[currentIndex];
-        }
-
-        if (mainLabel && mainImg) {
-            mainLabel.innerText = mainImg.alt;
         }
 
         if (subImgs.length > 0) {

@@ -706,23 +706,6 @@ nav {
     display: block;
 }
 
-.snap-label {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 8px 20px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border-radius: 50px;
-    border-bottom: 4px solid var(--primary-blue);
-    white-space: nowrap;
-    font-family: 'Fredoka', sans-serif;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-}
 
 .sub-grid-pics {
     display: grid;
